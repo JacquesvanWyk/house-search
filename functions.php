@@ -502,5 +502,139 @@ function house_search_scripts_loader() {
 }
 add_action( 'wp_enqueue_scripts', 'house_search_scripts_loader' );
 
+/**
+ * Theme Required and recommended plugins
+ */
+require_once get_template_directory() .'/functions/config-plugins.php';
 
-require_once get_template_directory() .'/inc/acf.php';
+
+
+if( function_exists('acf_add_local_field_group') ):
+
+    acf_add_local_field_group(array(
+        'key' => 'group_6193670b5f58e',
+        'title' => 'Rentals',
+        'fields' => array(
+            array(
+                'key' => 'field_61936712a8e2f',
+                'label' => 'Rooms',
+                'name' => 'rooms',
+                'type' => 'number',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+            array(
+                'key' => 'field_6193672ba8e30',
+                'label' => 'Bathrooms',
+                'name' => 'bathrooms',
+                'type' => 'number',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+            array(
+                'key' => 'field_61936744a8e31',
+                'label' => 'Address',
+                'name' => 'address',
+                'type' => 'textarea',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'new_lines' => '',
+            ),
+            array(
+                'key' => 'field_61936759a8e32',
+                'label' => 'Area',
+                'name' => 'area',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => 'sqm',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_6193676ba8e33',
+                'label' => 'Price',
+                'name' => 'price',
+                'type' => 'number',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => 'R',
+                'append' => 'p/m',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'rentals',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+        'show_in_rest' => 0,
+    ));
+
+endif;
