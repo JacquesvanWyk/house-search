@@ -24,7 +24,8 @@ the_post();
 //				);
 //				edit_post_link( esc_html__( 'Edit', 'house-search' ), '<span class="edit-link">', '</span>' );
 //			?>
-            <h5>Homepagggggee</h5>
+
+
 		</div><!-- /#post-<?php the_ID(); ?> -->
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template.
@@ -37,5 +38,6 @@ the_post();
 		get_sidebar();
 	?>
 </div><!-- /.row -->
+
 <?php
 get_footer();

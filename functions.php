@@ -501,3 +501,6 @@ function house_search_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'house_search_scripts_loader' );
+
+
+require_once get_template_directory() .'/inc/acf.php';
